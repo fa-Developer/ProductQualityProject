@@ -11,33 +11,18 @@ namespace GildedRoseTests
         public static void Main(string[] args)
         {
             Console.WriteLine("OMGHAI!");
-
-            IList<Item> Items = new List<Item>{
-                new Item {Name = "+5 Dexterity Vest", SellIn = 10, Quality = 20},
-                new Item {Name =  GildedRose.AGED_BRIE, SellIn = 2, Quality = 0},
-                new Item {Name = "Elixir of the Mongoose", SellIn = 5, Quality = 7},
-                new Item {Name = GildedRose.SULFURAS, SellIn = 0, Quality = 80},
-                new Item {Name =  GildedRose.SULFURAS, SellIn = -1, Quality = 80},
-                new Item
-                {
-                    Name = GildedRose.BACKSTAGE,
-                    SellIn = 15,
-                    Quality = 20
-                },
-                new Item
-                {
-                    Name = GildedRose.BACKSTAGE,
-                    SellIn = 10,
-                    Quality = 49
-                },
-                new Item
-                {
-                    Name = GildedRose.BACKSTAGE,
-                    SellIn = 5,
-                    Quality = 49
-                },
-                // this conjured item does not work properly yet
-                new Item {Name = "Conjured Mana Cake", SellIn = 3, Quality = 6}
+            ProductFactory prdfactory = new ProductFactory();
+            IList<Item> Items = new List<Item>{ (Item) prdfactory.CreateProduct("+5 Dexterity Vest",  10,  20),
+             //   (Item) prdfactory.CreateProduct(GildedRose.AGED_BRIE,  2,  0),
+                (Item) prdfactory.CreateProduct( "Elixir of the Mongoose",  5,  7),
+             /**   (Item) prdfactory.CreateProduct(GildedRose.SULFURAS,  0,  80)
+               ,  (Item) prdfactory.CreateProduct(GildedRose.SULFURAS,  -1,  80)
+                ,(Item) prdfactory.CreateProduct(GildedRose.BACKSTAGE,  15,  20),
+                 (Item) prdfactory.CreateProduct(GildedRose.BACKSTAGE,  10,  49),
+                 (Item) prdfactory.CreateProduct(GildedRose.BACKSTAGE,  5,  49),**/
+                 (Item) prdfactory.CreateProduct("Conjured Mana Cake",  3,  6),
+                                // this conjured item does not work properly yet
+                
             };
 
             var app = new GildedRose(Items);

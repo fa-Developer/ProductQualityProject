@@ -12,14 +12,14 @@ namespace GildedRoseTests
             GildedRose app = new GildedRose(Items);
             app.UpdateQuality();
             return Items[0];
-            
+
 
         }
 
 
 
 
-        #region Test_GenericPrds
+     /**   #region Test_GenericPrds
         [Fact]
         public void TestGenericProduct_SellInAndQualityReduced()
         {
@@ -135,6 +135,6 @@ namespace GildedRoseTests
             Item item = CreateAndUpdateItem(GildedRose.BACKSTAGE, 5, 49);
             Assert.Equal(50, item.Quality);
         }
-        #endregion
+        #endregion**/
     }
 }

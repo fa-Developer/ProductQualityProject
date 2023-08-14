@@ -27,76 +27,10 @@ namespace GildedRoseKata
             for (var i = 0; i < Items.Count; i++)
             {
                 var Item = Items[i];
-                if (Item.Name != AGED_BRIE && Item.Name != BACKSTAGE)
-                { 
-                    if (Item.Quality > 0)
-                    {
-                        if (Item.Name != SULFURAS)
-                        {
-                            Item.Quality = Item.Quality - 1;
-                        }
-                    }
-                }
-                else
-                {
-                    if (Item.Quality < 50)
-                    {
-                        Item.Quality = Item.Quality + 1;
-
-                        if (Item.Name == BACKSTAGE)
-                        {
-                            if (Item.SellIn < 11)
-                            {
-                                if (Item.Quality < 50)
-                                {
-                                    Item.Quality = Item.Quality + 1;
-                                }
-                            }
-
-                            if (Item.SellIn < 6)
-                            {
-                                if (Item.Quality < 50)
-                                {
-                                    Item.Quality = Item.Quality + 1;
-                                }
-                            }
-                        }
-                    }
-                }
-
-                if (Item.Name != SULFURAS)
-                {
-                    Item.SellIn = Item.SellIn - 1;
-                }
-
-                if (Item.SellIn < 0)
-                {
-                    if (Item.Name != AGED_BRIE)
-                    {
-                        if (Item.Name != BACKSTAGE)
-                        {
-                            if (Item.Quality > 0)
-                            {
-                                if (Item.Name != SULFURAS)
-                                {
-                                    Item.Quality = Item.Quality - 1;
-                                }
-                            }
-                        }
-                        else
-                        {
-                            Item.Quality = Item.Quality - Item.Quality;
-                        }
-                    }
-                    else
-                    {
-                        if (Item.Quality < 50)
-                        {
-                            Item.Quality = Item.Quality + 1;
-                        }
-                    }
+                ((IProduct)Item).Update();
+                 
                 }
             }
         }
     }
-}
+
