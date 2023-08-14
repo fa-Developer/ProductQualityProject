@@ -18,7 +18,14 @@ namespace GildedRoseKata
         }
         public void Update()
         {
-            throw new NotImplementedException();
+          
+                this.SellIn--;
+                this.Quality++;
+                if (this.SellIn < GildedRose.SELLIN_SECONDVALUE) this.Quality++;
+                if (this.SellIn < GildedRose.SELLIN_FIRSTVALUE) this.Quality++;
+                if (this.SellIn <= 0) this.Quality = GildedRose.MINIMUM_QUALITY;
+                if (this.Quality > 50) this.Quality = GildedRose.MAXIMUM_QUALITY;
+            
         }
 
     }
