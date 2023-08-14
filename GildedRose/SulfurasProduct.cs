@@ -15,7 +15,7 @@ namespace GildedRoseKata
         }
         public void Update()
         {
-            throw new NotImplementedException();
+            this.SellIn--;
         }
     }
 }
