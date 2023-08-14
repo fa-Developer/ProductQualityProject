@@ -1,5 +1,5 @@
 # ProductQualityProject
-this is ProductQualityProject refactoring kata in  CSharpCore using NUnit testing framework and the Abstrat Factory Pattern.
+this is ProductQualityProject refactoring kata in  CSharpCore using NUnit testing framework and the Abstract Factory Pattern.
 the ProductQualityProject is an application that allows the update of Quality and SellIn properties for all type of products of a company
 First an introduction to our system:
 
