@@ -13,13 +13,13 @@ namespace GildedRoseTests
             Console.WriteLine("OMGHAI!");
             ProductFactory prdfactory = new ProductFactory();
             IList<Item> Items = new List<Item>{ (Item) prdfactory.CreateProduct("+5 Dexterity Vest",  10,  20),
-             //   (Item) prdfactory.CreateProduct(GildedRose.AGED_BRIE,  2,  0),
+               (Item) prdfactory.CreateProduct(GildedRose.AGED_BRIE,  2,  0),
                 (Item) prdfactory.CreateProduct( "Elixir of the Mongoose",  5,  7),
-             /**   (Item) prdfactory.CreateProduct(GildedRose.SULFURAS,  0,  80)
+                (Item) prdfactory.CreateProduct(GildedRose.SULFURAS,  0,  80)
                ,  (Item) prdfactory.CreateProduct(GildedRose.SULFURAS,  -1,  80)
                 ,(Item) prdfactory.CreateProduct(GildedRose.BACKSTAGE,  15,  20),
                  (Item) prdfactory.CreateProduct(GildedRose.BACKSTAGE,  10,  49),
-                 (Item) prdfactory.CreateProduct(GildedRose.BACKSTAGE,  5,  49),**/
+                 (Item) prdfactory.CreateProduct(GildedRose.BACKSTAGE,  5,  49),
                  (Item) prdfactory.CreateProduct("Conjured Mana Cake",  3,  6),
                                 // this conjured item does not work properly yet
                 

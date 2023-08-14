@@ -15,6 +15,7 @@ namespace GildedRoseKata
                 case GildedRose.BACKSTAGE: return new BackStageProduct(sellIn, quality);
                 case GildedRose.SULFURAS: return new SulfurasProduct(sellIn, quality);
                 case GildedRose.AGED_BRIE: return new AgedBrieProduct(sellIn, quality);
+                case GildedRose.CONJURD: return new ConjuredProduct(sellIn, quality);
                 default: return new GenericProduct(sellIn, quality);
 
             }
