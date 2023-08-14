@@ -22,4 +22,4 @@ We have recently signed a supplier of conjured items. This requires an update to
 
 	- "Conjured" items degrade in Quality twice as fast as normal items
 # Important Note
-there many tests cases in this apllication for each product type
+there many tests cases in this application for each product type
