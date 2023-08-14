@@ -23,3 +23,5 @@ We have recently signed a supplier of conjured items. This requires an update to
 	- "Conjured" items degrade in Quality twice as fast as normal items
 # Important Note
 there many tests cases in this application for each product type
+To run the application in Visual Studio you can select Debug > Start without debugging from the top menu of Visual Studio.
+To run the tests choose Test > Test Explorer from the top menu bar of Visual Studio and then run your unit tests by clicking Run All .
